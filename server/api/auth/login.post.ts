@@ -14,7 +14,7 @@ export default defineEventHandler(async (event) => {
   const { email, password } = u.data
   try {
     await authService.passwordLogin(event, email, password)
-    return { success: true }
+    return reply(event, true)
   }
   catch (error) {
     return reply(event, false, 401, 'Invalid email or password')

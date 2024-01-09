@@ -7,9 +7,8 @@ export default defineEventHandler(async (event) => {
     return sendRedirect(event, '/', 302)
   const org = await stripeService.getOrgForCustomerId(session.customer as string)
 
-  return org
-  // if (org)
-  //   return sendRedirect(event, `/app/${org.slug}`, 302)
-//
-  // return sendRedirect(event, '/', 302)
+  if (org)
+    return sendRedirect(event, `/app/${org.slug}`, 302)
+
+  return sendRedirect(event, '/', 302)
 })

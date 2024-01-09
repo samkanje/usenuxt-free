@@ -39,6 +39,7 @@ export default defineEventHandler(async (event) => {
     return sendRedirect(event, '/app') // redirect to profile page
   }
   catch (e) {
+    console.error(e)
     if (e instanceof OAuthRequestError) {
       // invalid code
       return sendError(

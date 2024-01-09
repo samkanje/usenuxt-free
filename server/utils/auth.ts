@@ -26,7 +26,7 @@ const auth = lucia({
     }
   },
 })
-console.log(config.public.url)
+
 export const googleAuth = google(auth, {
   clientId: config.google.clientId,
   clientSecret: config.google.clientSecret,

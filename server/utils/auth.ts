@@ -1,4 +1,5 @@
 import * as adapter from '@lucia-auth/adapter-postgresql'
+import { google } from '@lucia-auth/oauth/providers'
 import { lucia } from 'lucia'
 import { h3 } from 'lucia/middleware'
 import process from 'node:process'
@@ -6,8 +7,9 @@ import postgres from 'postgres'
 import { userService } from './user'
 
 const PASS_AUTH_KEY = 'password'
+const config = useRuntimeConfig()
 
-const sql = postgres(process.env.DATABASE_URL!)
+const sql = postgres(config.databaseUrl)
 const auth = lucia({
   env: process.dev ? 'DEV' : 'PROD',
   middleware: h3(),
@@ -23,6 +25,13 @@ const auth = lucia({
       email: user.email,
     }
   },
+})
+
+export const googleAuth = google(auth, {
+  clientId: config.google.clientId,
+  clientSecret: config.google.clientSecret,
+  scope: ['https://www.googleapis.com/auth/userinfo.email', 'https://www.googleapis.com/auth/userinfo.profile'],
+  redirectUri: `${config.public.url}/auth/google/callback`,
 })
 
 export type Auth = typeof auth

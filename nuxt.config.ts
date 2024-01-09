@@ -9,8 +9,13 @@ export default defineNuxtConfig({
     },
   },
   runtimeConfig: {
+    databaseUrl: '',
     public: {
       url: 'http://localhost:3000',
+    },
+    google: {
+      clientId: '',
+      clientSecret: '',
     },
     stripe: {
       publishableKey: '',

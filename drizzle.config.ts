@@ -6,6 +6,6 @@ export default defineConfig({
   out: 'server/database/migrations',
   driver: 'pg',
   dbCredentials: {
-    connectionString: process.env.DATABASE_URL!,
+    connectionString: process.env.NUXT_DATABASE_URL!,
   },
 })

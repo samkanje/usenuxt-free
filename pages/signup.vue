@@ -36,7 +36,14 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
 </script>
 
 <template>
-  <UCard class="max-w-sm mx-auto mt-52">
+  <h1 class="text-3xl font-medium mb-4 text-center mt-12 lg:mt-52 my-8">
+    Sign up
+  </h1>
+  <UCard class="max-w-sm mx-auto">
+    <UButton block class="mb-4" variant="outline" color="gray" to="/auth/google" external>
+      <UIcon name="i-logos-google-icon" class="h-6 w-6 m-1" /> Sign in with Google
+    </UButton>
+    <UDivider class="my-4" label="OR" />
     <UAlert v-if="errorMessage" :title="errorMessage" class="mb-2" variant="soft" color="orange" />
     <UForm :schema="schema" :state="state" class="space-y-4" @submit="onSubmit">
       <UFormGroup label="Name" name="name">
@@ -54,7 +61,11 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
       <UButton type="submit">
         Submit
       </UButton>
-      <p class="text-sm mt-4">Already have an account? <NuxtLink to="/login" class="text-primary">Sign in</NuxtLink></p>
+      <p class="text-sm mt-4">
+        Already have an account? <NuxtLink to="/login" class="text-primary">
+          Sign in
+        </NuxtLink>
+      </p>
     </UForm>
   </UCard>
 </template>

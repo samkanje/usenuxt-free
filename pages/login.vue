@@ -34,10 +34,14 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
 </script>
 
 <template>
-  <div class="flex justify-center mt-12 lg:mt-52 my-8">
-    <Brand />
-  </div>
+  <h1 class="text-3xl font-medium mb-4 text-center mt-12 lg:mt-52 my-8">
+    Sign in
+  </h1>
   <UCard class="max-w-sm mx-auto ">
+    <UButton block class="mb-4" variant="outline" color="gray" to="/auth/google" external>
+      <UIcon name="i-logos-google-icon" class="h-6 w-6 m-1" /> Sign in with Google
+    </UButton>
+    <UDivider class="my-4" label="OR" />
     <UAlert v-if="errorMessage" :title="errorMessage" class="mb-2" variant="soft" color="orange" />
     <UForm :schema="schema" :state="state" class="space-y-4" @submit="onSubmit">
       <UFormGroup label="Email" name="email">

@@ -15,6 +15,7 @@
   "dependencies": {
     "@iconify/json": "^2.2.166",
     "@lucia-auth/adapter-postgresql": "^2.0.2",
+    "@lucia-auth/oauth": "^3.5.1",
     "@nuxt/ui": "^2.11.1",
     "drizzle-orm": "^0.29.3",
     "lucia": "^2.7.6",

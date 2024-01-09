@@ -47,7 +47,7 @@ const features = [
       <div class="mt-12">
         <ul class="grid gap-y-8 gap-x-12 sm:grid-cols-2 lg:grid-cols-3">
           <li v-for="(item, index) in features" :key="index" class="space-y-3">
-            <div class="w-12 h-12 mx-auto bg-primary-50 text-primary-600 rounded-full flex items-center justify-center">
+            <div class="w-12 h-12 mx-auto bg-primary/10 text-primary-600 rounded-full flex items-center justify-center">
               <UIcon :name="item.icon" class="h-6 w-6 text-primary" />
             </div>
             <h4 class="text-lg  font-semibold">

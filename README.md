@@ -24,6 +24,12 @@ Copy .env and update the values to match your environment (especially the NUXT_D
 cp .env.example .env
 ```
 
+If you don't alread have a Postgres database, spin one up quickly with docker.
+
+```bash
+docker run --name postgres -e POSTGRES_PASSWORD=postgres -d postgres
+```
+
 ## Development Server
 
 Start the development server on `http://localhost:3000`:

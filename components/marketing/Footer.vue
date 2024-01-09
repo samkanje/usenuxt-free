@@ -39,7 +39,7 @@ const footerNavs = [
         <ul class="flex items-center space-x-8">
           <li>
             <NuxtLink external href="https://github.com/samkanje/usenuxt-free">
-              <UIcon name="i-devicon-github" class="h-6 w-6 grayscale hover:grayscale-0" />
+              <UIcon name="i-devicon-github" class="h-6 w-6 grayscale hover:grayscale-0 dark:invert dark:opacity-60" />
             </NuxtLink>
           </li>
           <li>
@@ -49,7 +49,7 @@ const footerNavs = [
           </li>
           <li>
             <NuxtLink external href="https://twitter.com/in/kanje">
-              <UIcon name="i-devicon-twitter" class="h-6 w-6 grayscale hover:grayscale-0" />
+              <UIcon name="i-devicon-twitter" class="h-6 w-6 grayscale hover:grayscale-0 dark:invert dark:opacity-60" />
             </NuxtLink>
           </li>
           <li>

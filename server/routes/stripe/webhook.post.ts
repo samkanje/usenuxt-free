@@ -33,5 +33,8 @@ export default defineEventHandler(async (event) => {
       })
     }
   }
+  if (stripeEvent.type && (stripeEvent.type.startsWith('product') || stripeEvent.type.startsWith('plan') || stripeEvent.type.startsWith('price')))
+    await stripeService.updateProducts()
+
   return `handled ${stripeEvent.type}.`
 })

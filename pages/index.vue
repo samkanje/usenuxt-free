@@ -1,8 +1,9 @@
 <script setup lang="ts">
-
 </script>
 
 <template>
   <MarketingHero />
-  <MarketingPricingTable />
+  <MarketingFeatures />
+  <MarketingPricing />
+  <MarketingFAQ />
 </template>

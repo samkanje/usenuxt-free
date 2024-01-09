@@ -16,8 +16,8 @@ function onPeriodChange(index: number) {
 
 <template>
   <div class="max-w-screen-lg mx-auto">
-    <UTabs :items="tabs" class="max-w-sm mx-auto" @change="onPeriodChange" />
-    <div class="lg:grid lg:grid-cols-3 gap-8">
+    <UTabs :items="tabs" class="max-w-sm mx-auto mb-8" @change="onPeriodChange" />
+    <div class="grid lg:grid-cols-3 gap-8">
       <UCard v-for="product in products" :key="product.id" class="flex-grow max-w-sm text-center">
         <h3 class="text-3xl font-semibold mb-4">
           {{ product.name }}

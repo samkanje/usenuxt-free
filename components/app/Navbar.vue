@@ -7,7 +7,7 @@
       <Brand />
       <AppOrgSelector />
       <div class="flex ml-auto items-center">
-        <AppAvatarMenu />
+        <AuthButton />
       </div>
     </UContainer>
     <UDivider />

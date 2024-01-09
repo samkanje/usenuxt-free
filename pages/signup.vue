@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import type { FormSubmitEvent } from '#ui/types'
-import { z } from 'zod'
+import type { FormSubmitEvent } from '#ui/types';
+import { z } from 'zod';
 
 const user = useUser()
 if (user.value)
@@ -54,6 +54,7 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
       <UButton type="submit">
         Submit
       </UButton>
+      <p class="text-sm mt-4">Already have an account? <NuxtLink to="/login" class="text-primary">Sign in</NuxtLink></p>
     </UForm>
   </UCard>
 </template>

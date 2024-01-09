@@ -1,5 +1,6 @@
 <script setup lang="ts">
 const user = useUser()
+const route = useRoute()
 const items = computed(() => [
   [{
     label: user.value?.email ?? '',
@@ -21,8 +22,11 @@ const items = computed(() => [
 </script>
 
 <template>
-  <div class="flex items-center gap-2">
-    <span class="text-sm">{{ user?.name }}</span>
+  <div v-if="user" class="flex items-center gap-2">
+    <NuxtLink v-if="!route.path.startsWith('/app')" to="/app">
+      Dashboard
+    </NuxtLink>
+    <span v-else class="text-sm">{{ user?.name }}</span>
     <UDropdown :items="items" :ui="{ item: { disabled: 'cursor-text select-text' } }">
       <UAvatar icon="i-solar-user-bold-duotone" />
 
@@ -43,5 +47,13 @@ const items = computed(() => [
         <UIcon :name="item.icon" class="flex-shrink-0 h-4 w-4 ms-auto" />
       </template>
     </UDropdown>
+  </div>
+  <div v-else>
+    <NuxtLink
+      to="/login"
+      class="py-3 px-4 text-center border border-gray-200 dark:border-gray-800 rounded-md block lg:inline lg:border-0"
+    >
+      Login
+    </NuxtLink>
   </div>
 </template>

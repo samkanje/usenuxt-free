@@ -34,7 +34,10 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
 </script>
 
 <template>
-  <UCard class="max-w-sm mx-auto mt-52">
+  <div class="flex justify-center mt-12 lg:mt-52 my-8">
+    <Brand />
+  </div>
+  <UCard class="max-w-sm mx-auto ">
     <UAlert v-if="errorMessage" :title="errorMessage" class="mb-2" variant="soft" color="orange" />
     <UForm :schema="schema" :state="state" class="space-y-4" @submit="onSubmit">
       <UFormGroup label="Email" name="email">
@@ -48,6 +51,11 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
       <UButton type="submit">
         Submit
       </UButton>
+      <p class="text-sm mt-4">
+        Don't have an account? <NuxtLink to="/signup" class="text-primary">
+          Sign up
+        </NuxtLink>
+      </p>
     </UForm>
   </UCard>
 </template>

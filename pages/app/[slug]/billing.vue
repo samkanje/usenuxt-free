@@ -25,6 +25,6 @@ const portalUrl = computed(() => `/stripe/portal?slug=${data.value?.org.slug}`)
     <h2 class="font-medium mb-4">
       Upgrade your plan
     </h2>
-    <MarketingPricingTable />
+    <PricingTable />
   </UCard>
 </template>

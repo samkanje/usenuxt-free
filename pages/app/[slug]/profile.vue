@@ -1,3 +1,5 @@
 <template>
-  <h1>Profile</h1>
+  <h1 class="text-lg font-medium">
+    Profile
+  </h1>
 </template>

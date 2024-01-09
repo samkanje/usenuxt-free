@@ -12,13 +12,14 @@ export default defineEventHandler(async (event) => {
     return reply(event, false, 401)
 
   const { email, password } = u.data
-  const user = await authService.passwordLogin(event,email, password)
-  if (!user)
+  try {
+    await authService.passwordLogin(event, email, password)
+    return { success: true }
+  }
+  catch (error) {
     return reply(event, false, 401, 'Invalid email or password')
-
-  return reply(event, !!user)
+  }
 })
-
 function reply(event: any, success: boolean, code = 200, message = '') {
   setResponseStatus(event, code)
   return { success, message }

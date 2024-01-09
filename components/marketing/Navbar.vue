@@ -4,10 +4,7 @@ function menuOpen() {
   open.value = !open.value
 }
 
-const navigation = [
-  { title: 'Customers', to: '/Customers' },
-  { title: 'Careers', to: '/Careers' },
-]
+const navigation: { title: string, to: string }[] = []
 </script>
 
 <template>
@@ -43,15 +40,7 @@ const navigation = [
         <div>
           <ul class="flex flex-col-reverse space-x-0 lg:space-x-6 lg:flex-row">
             <li class="mt-4 lg:mt-0">
-              <UColorModeButton />
-            </li>
-            <li class="mt-4 lg:mt-0">
-              <NuxtLink
-                to="/login"
-                class="py-3 px-4 text-center border border-gray-200 dark:border-gray-800 rounded-md block lg:inline lg:border-0"
-              >
-                Login
-              </NuxtLink>
+              <AuthButton />
             </li>
           </ul>
         </div>

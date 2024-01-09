@@ -27,10 +27,10 @@ const faqs = [
   <div>
     <section class="leading-relaxed max-w-screen-xl mt-12 mx-auto px-4 md:px-8">
       <div class="space-y-3 text-center">
-        <h1 class="text-3xl text-gray-800 font-semibold">
+        <h1 class="text-3xl font-semibold">
           Frequently Asked Questions
         </h1>
-        <p class="text-gray-600 max-w-lg mx-auto text-lg">
+        <p class="max-w-lg mx-auto text-lg">
           Feel free to reach out if your question is not answered here.
         </p>
       </div>
@@ -41,12 +41,12 @@ const faqs = [
           class="space-y-3 mt-5 overflow-hidden border-b"
           @click="toggleFaq(index)"
         >
-          <h4 class="cursor-pointer pb-5 flex items-center justify-between text-lg text-gray-700 font-medium">
+          <h4 class="cursor-pointer pb-5 flex items-center justify-between text-lg font-medium">
             {{ item.q }}
             <svg
               v-if="selectedFaq === index"
               xmlns="http://www.w3.org/2000/svg"
-              class="h-5 w-5 text-gray-500 ml-2"
+              class="h-5 w-5 ml-2"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -61,7 +61,7 @@ const faqs = [
             <svg
               v-else
               xmlns="http://www.w3.org/2000/svg"
-              class="h-5 w-5 text-gray-500 ml-2"
+              class="h-5 w-5 ml-2"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -76,7 +76,7 @@ const faqs = [
           </h4>
           <div v-show="selectedFaq === index">
             <div>
-              <p class="text-gray-500 pb-4">
+              <p class=" pb-4">
                 {{ item.a }}
               </p>
             </div>

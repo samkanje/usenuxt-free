@@ -25,12 +25,12 @@ function onPeriodChange(index: number) {
         <p class="text-5xl font-medium text-primary">
           ${{ isMonthly ? formatPrice(product.monthlyPrice) : formatPrice(product.yearlyPrice) }}
         </p>
-        <p class="text-gray-500 mt-2">
+        <p class=" mt-2">
           {{ isMonthly ? 'per month' : 'per year' }}
         </p>
         <div class="text-start my-4">
           <span class="font-semibold">Features</span>
-          <ul class=" text-gray-600">
+          <ul class=" ">
             <li v-for="feature in product.features" :key="feature" class="my-1 flex items-center gap-1">
               <UIcon name="i-solar-check-circle-bold-duotone" class="h-4 w-4" />  {{ feature }}
             </li>

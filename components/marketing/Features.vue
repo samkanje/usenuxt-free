@@ -35,9 +35,9 @@ const features = [
 
 <template>
   <section class="py-14">
-    <div class="max-w-screen-xl mx-auto px-4 text-center text-gray-600 md:px-8">
+    <div class="max-w-screen-xl mx-auto px-4 text-center md:px-8">
       <div class="max-w-2xl mx-auto">
-        <h3 class="text-gray-800 text-3xl font-semibold sm:text-4xl">
+        <h3 class=" text-3xl font-semibold sm:text-4xl">
           The fastest way to launch a product
         </h3>
         <p class="mt-3">
@@ -50,7 +50,7 @@ const features = [
             <div class="w-12 h-12 mx-auto bg-primary-50 text-primary-600 rounded-full flex items-center justify-center">
               <UIcon :name="item.icon" class="h-6 w-6 text-primary" />
             </div>
-            <h4 class="text-lg text-gray-800 font-semibold">
+            <h4 class="text-lg  font-semibold">
               {{ item.title }}
             </h4>
             <p>

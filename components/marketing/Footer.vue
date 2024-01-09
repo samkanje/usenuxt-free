@@ -26,9 +26,9 @@ const footerNavs = [
     </div>
     <ul class="items-center justify-center mt-8 space-y-5 sm:flex sm:space-x-4 sm:space-y-0">
       <li v-for="item in footerNavs" :key="item.name" class="">
-        <a href="{{item.href}}">
+        <Nuxtlink :to="item.href">
           {{ item.name }}
-        </a>
+        </Nuxtlink>
       </li>
     </ul>
     <div class="mt-8 items-center justify-between sm:flex gap-8">

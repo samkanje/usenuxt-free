@@ -35,20 +35,23 @@ class OrgService {
   }
 
   async saveSubscription(org: Org, stripeSubscription: Stripe.Subscription, product: Product) {
-    const [subscription] = await db.insert(tables.subscription).values({
-      code: product.code,
-      name: product.name,
-      orgId: org.id,
-      stripeCustomerId: stripeSubscription.customer as string,
-      stripeSubscriptionId: stripeSubscription.id,
-      exipires: stripeSubscription.current_period_end as number,
-    }).onConflictDoUpdate({ target: tables.subscription.stripeSubscriptionId, set: { code: product.code, name: product.name, stripeSubscriptionId: stripeSubscription.id, exipires: stripeSubscription.current_period_end } }).returning()
+    const code = product.code
+    const name = product.name
+    const interval = stripeSubscription.items.data[0].plan.interval as string
+    const stripeCustomerId = stripeSubscription.customer as string
+    const stripeSubscriptionId = stripeSubscription.id
+    const expires = stripeSubscription.current_period_end * 1000
+    const orgId = org.id
+
+    const [subscription] = await db.insert(tables.subscription)
+      .values({ code, name, stripeCustomerId, stripeSubscriptionId, interval, expires, orgId })
+      .onConflictDoUpdate({ target: tables.subscription.stripeSubscriptionId, set: { code, name, stripeSubscriptionId, interval, expires } }).returning()
 
     return subscription
   }
 
   async getSubscription(orgId: string) {
-    const [subscription] = await db.select().from(tables.subscription).where(and(eq(tables.subscription.orgId, orgId), gte(tables.subscription.exipires, Date.now())))
+    const [subscription] = await db.select().from(tables.subscription).where(and(eq(tables.subscription.orgId, orgId), gte(tables.subscription.expires, Date.now())))
     return subscription
   }
 

@@ -2,7 +2,7 @@ import type Stripe from 'stripe'
 
 export default defineEventHandler(async (event) => {
   const rawBody = await readRawBody(event)
-  const stripeSignature = event.headers.get('stripe-signature')
+  const stripeSignature = event.node.req.headers['stripe-signature'] as string
   if (!stripeSignature || !rawBody) {
     throw createError({
       statusCode: 400,

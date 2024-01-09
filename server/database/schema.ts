@@ -77,6 +77,7 @@ export const subscription = pgTable('stripe_subscription', {
   orgId: varchar('org_id').notNull().references(() => org.id),
   name: varchar('name').notNull(),
   code: varchar('code').notNull(),
+  interval: varchar('interval').default('month').notNull(),
   stripeCustomerId: varchar('stripe_customer_id').notNull(),
-  exipires: bigint('expires', { mode: 'number' }).notNull(),
+  expires: bigint('expires', { mode: 'number' }).notNull(),
 })

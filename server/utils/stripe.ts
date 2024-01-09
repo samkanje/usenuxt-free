@@ -32,8 +32,8 @@ class StripeService {
     }).map(p => p.product as Stripe.Product)
 
     const products = stripeProducts.map((product) => {
-      const monthlyPrice = prices.find(p => p.recurring?.interval === 'month' && product.id === (p.product as Stripe.Product).id)
-      const yearlyPrice = prices.find(p => p.recurring?.interval === 'year' && product.id === (p.product as Stripe.Product).id)
+      const monthlyPrice = prices.find(p => p.active && p.recurring?.interval === 'month' && product.id === (p.product as Stripe.Product).id)
+      const yearlyPrice = prices.find(p => p.active && p.recurring?.interval === 'year' && product.id === (p.product as Stripe.Product).id)
 
       return {
         id: product.id,
@@ -107,7 +107,6 @@ class StripeService {
   }
 
   getStripeEvent(rawBody: string, stripeSignature: string) {
-    console.log('types', typeof rawBody, typeof stripeSignature)
     return stripe.webhooks.constructEvent(rawBody, stripeSignature, config.stripe.webhookSecret)
   }
 }

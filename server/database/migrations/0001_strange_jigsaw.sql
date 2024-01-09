@@ -1,0 +1,1 @@
+ALTER TABLE "stripe_subscription" ADD COLUMN "interval" varchar DEFAULT 'month' NOT NULL;

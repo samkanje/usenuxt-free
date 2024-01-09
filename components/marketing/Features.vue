@@ -1,34 +1,34 @@
 <script setup lang="ts">
 const features = [
   {
-    icon: 'i-tabler-brand-speedtest',
-    title: 'Fast Refresh',
-    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue, nisl eget molestie varius, enim ex faucibus purus.',
-  },
-  {
-    icon: 'i-tabler-brand-google-analytics',
-    title: 'Analytics',
-    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue, nisl eget molestie varius, enim ex faucibus purus.',
-  },
-  {
-    icon: 'i-tabler-lock',
-    title: 'Datacenter security',
-    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue, nisl eget molestie varius, enim ex faucibus purus.',
-  },
-  {
-    icon: 'i-tabler-stack-2',
-    title: 'Build on your terms',
-    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue, nisl eget molestie varius, enim ex faucibus purus.',
-  },
-  {
     icon: 'i-tabler-shield-check',
-    title: 'Safe to use',
-    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue, nisl eget molestie varius, enim ex faucibus purus.',
+    title: 'Authentication',
+    desc: 'Includes password and social login flows for user convenience. Easily add more providers through Lucia Auth.',
+  },
+  {
+    icon: 'i-tabler-credit-card',
+    title: 'Payments',
+    desc: 'Stripe subscriptions and payments integration from day one. Users can manage subscriptions in the billing portal.',
+  },
+  {
+    icon: 'i-tabler-database-star',
+    title: 'Own the data',
+    desc: 'Built with the most reliable and scalable database, Postgres. Use of Drizzle ORM makes it easy to use with any provider e.g. Supabase, AWS RDS...',
+  },
+  {
+    icon: 'i-tabler-users-group',
+    title: 'Enterprise ready',
+    desc: 'Users can create teams and projects, and invite members.',
+  },
+  {
+    icon: 'i-tabler-palette',
+    title: 'Elegant Design',
+    desc: 'Craft beautiful sites with NuxtUI and Headless UI components. Built with TailwindCSS and mobile first.',
   },
   {
     icon: 'i-tabler-stars',
     title: 'Flexible',
-    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue, nisl eget molestie varius, enim ex faucibus purus.',
+    desc: 'You own the code. Modify it to your hearts content thanks to the modularized architecture.',
   },
 ]
 </script>

@@ -10,7 +10,7 @@
           Don't reinvent the wheel
         </h3>
         <p class="mt-3">
-          Subscription products and pricess are syncronized from Stripe.
+          Subscription products and prices are synchronized from Stripe.
         </p>
       </div>
       <div class="mt-12">

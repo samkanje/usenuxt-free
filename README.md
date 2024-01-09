@@ -1,6 +1,4 @@
-# Nuxt 3 Minimal Starter
-
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+# UseNuxt Starter
 
 ## Setup
 
@@ -18,6 +16,12 @@ yarn install
 
 # bun
 bun install
+```
+
+Copy .env and update the values to match your environment (especially the NUXT_DATABASE_URL variable)
+
+```bash
+cp .env.example .env
 ```
 
 ## Development Server
@@ -38,6 +42,36 @@ yarn dev
 bun run dev
 ```
 
+Changes to the database schema can be pushed directly to dev database
+```bash
+# npm
+npm run db:push
+
+# pnpm
+pnpm run db:push
+
+# yarn
+yarn run db:push
+
+# bun
+bun run db:push
+```
+
+To commit the schema changes for them to be applied automatically in production, generate a migration.
+```bash
+# npm
+npm run db:gen
+
+# pnpm
+pnpm run db:gen
+
+# yarn
+yarn run db:gen
+
+# bun
+bun run run db:gen
+```
+
 ## Production
 
 Build the application for production:
@@ -56,20 +90,12 @@ yarn build
 bun run build
 ```
 
-Locally preview production build:
+Run production server:
 
 ```bash
-# npm
-npm run preview
+#node
+node .output/server/index.mjs
 
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
+# pm2
+pm2 .output/server/index.mjs
 ```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.

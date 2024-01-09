@@ -10,7 +10,7 @@
           Build your SaaS now
         </h1>
         <h2 class="text-4xl text-gray-800 font-extrabold mx-auto md:text-5xl">
-          Ship your startup fast with  <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#4ade80] to-[#166534]">the best Nuxt starter</span>
+          Ship fast with the best <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#4ade80] to-[#166534]">Nuxt 3 starter</span>
         </h2>
         <p class="max-w-2xl mx-auto">
           More than a template. This is a fully working project with all the essential features you need to ship today.

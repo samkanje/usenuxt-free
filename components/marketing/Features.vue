@@ -28,7 +28,7 @@ const features = [
   {
     icon: 'i-tabler-stars',
     title: 'Flexible',
-    desc: 'You own the code. Modify it to your hearts content thanks to the modularized architecture.',
+    desc: 'You own the code. Modify it to your heart\'s content thanks to the modularized architecture.',
   },
 ]
 </script>

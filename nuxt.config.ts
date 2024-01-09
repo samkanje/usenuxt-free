@@ -11,7 +11,7 @@ export default defineNuxtConfig({
   runtimeConfig: {
     databaseUrl: '',
     public: {
-      url: 'http://localhost:3000',
+      url: '',
     },
     google: {
       clientId: '',

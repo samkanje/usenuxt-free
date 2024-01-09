@@ -9,7 +9,8 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "db:push": "drizzle-kit push:pg",
-    "db:gen": "drizzle-kit generate:pg"
+    "db:gen": "drizzle-kit generate:pg",
+    "start": "node .output/server/index.mjs"
   },
   "dependencies": {
     "@iconify/json": "^2.2.163",

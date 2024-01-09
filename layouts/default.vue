@@ -1,0 +1,4 @@
+<template>
+  <MarketingNavbar />
+  <slot />
+</template>

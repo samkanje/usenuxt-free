@@ -1,0 +1,35 @@
+{
+  "name": "nuxt-app",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "db:push": "drizzle-kit push:pg",
+    "db:gen": "drizzle-kit generate:pg"
+  },
+  "dependencies": {
+    "@iconify/json": "^2.2.163",
+    "@lucia-auth/adapter-postgresql": "^2.0.2",
+    "@nuxt/ui": "^2.11.1",
+    "drizzle-orm": "^0.29.2",
+    "lucia": "^2.7.6",
+    "postgres": "^3.4.3",
+    "slugify": "^1.6.6",
+    "stripe": "^14.10.0",
+    "uid": "^2.0.2"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^2.6.1",
+    "@nuxtjs/tailwindcss": "latest",
+    "drizzle-kit": "^0.20.9",
+    "eslint": "^8.56.0",
+    "nuxt": "^3.9.0",
+    "radix-vue": "^1.2.6",
+    "vue": "^3.4.3",
+    "vue-router": "^4.2.5"
+  }
+}

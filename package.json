@@ -10,7 +10,9 @@
     "postinstall": "nuxt prepare",
     "db:push": "drizzle-kit push:pg",
     "db:gen": "drizzle-kit generate:pg",
-    "start": "node .output/server/index.mjs"
+    "start": "node .output/server/index.mjs",
+    "lint": "eslint . --fix",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@iconify/json": "^2.2.166",
@@ -31,6 +33,7 @@
     "@nuxtjs/tailwindcss": "latest",
     "drizzle-kit": "^0.20.10",
     "eslint": "^8.56.0",
+    "husky": "^8.0.0",
     "nuxt": "^3.9.1",
     "vue": "^3.4.6",
     "vue-router": "^4.2.5"

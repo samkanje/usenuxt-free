@@ -5,7 +5,6 @@ const { data, refresh } = useFetch(() => `/api/orgs/${route.params.slug}/members
 
 const roles = ['owner', 'member']
 const tabs = [{ label: 'Members', key: 'members' }, { label: 'Invited', key: 'invited' }]
-const isMembersTab = ref(true)
 
 const columns = [
   { key: 'name', label: 'Name' },
@@ -13,7 +12,7 @@ const columns = [
   { key: 'role', label: 'Role' },
   { key: 'actions' },
 ]
-function actions(row) {
+function actions() {
   return [
     [{
       label: 'Delete',
@@ -26,8 +25,8 @@ const invitedColumns = [
   { key: 'role', label: 'Role' },
   { key: 'actions' },
 ]
-async function changeRole(email: string, role: string) {
-  console.log(email, role)
+async function changeRole() {
+  // TODO
 }
 </script>
 
@@ -51,7 +50,7 @@ async function changeRole(email: string, role: string) {
           </template>
           <template #actions-data="{ row }">
             <span v-if="row.id === user.id">-</span>
-            <UDropdown v-if="row.id !== user.id" :items="actions(row)">
+            <UDropdown v-if="row.id !== user.id" :items="actions()">
               <UButton color="gray" variant="ghost" icon="i-heroicons-ellipsis-horizontal-20-solid" />
             </UDropdown>
           </template>
@@ -62,7 +61,7 @@ async function changeRole(email: string, role: string) {
           </template>
           <template #actions-data="{ row }">
             <span v-if="row.id === user.id">-</span>
-            <UDropdown v-if="row.id !== user.id" :items="actions(row)">
+            <UDropdown v-if="row.id !== user.id" :items="actions()">
               <UButton color="gray" variant="ghost" icon="i-heroicons-ellipsis-horizontal-20-solid" />
             </UDropdown>
           </template>

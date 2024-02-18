@@ -11,6 +11,14 @@ Welcome to UseNuxt, a comprehensive SaaS starter project built with Nuxt.js, des
 - **SEO Friendly:** Built-in SEO optimization for better visibility.
 - **Fully Customizable:** Flexible codebase that allows for easy customization and scalability.
 
+
+## Demo 🚀
+
+Experience UseNuxt in action and see firsthand what it can do for your next project.
+
+👉 [Visit the Demo](http://demo.usenuxt.com)
+
+
 ## Installation 🛠
 
 Before you begin, ensure you have [Node.js](https://nodejs.org/) installed on your machine. Then, follow these steps to get UseNuxt up and running:
